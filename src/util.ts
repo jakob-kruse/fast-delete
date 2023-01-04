@@ -15,6 +15,13 @@ export function urlMatch(match: string | RegExp): boolean {
   return new RegExp(match).test(window.location.pathname);
 }
 
-export function elementExists(selector: string): boolean {
-  return document.querySelector(selector) !== null;
+export function elementVisible(selector: string): boolean {
+  const element = document.querySelector(selector);
+
+  if (!element) {
+    return false;
+  }
+
+  const style = window.getComputedStyle(element);
+  return style && style.display !== "none" && style.visibility !== "hidden";
 }

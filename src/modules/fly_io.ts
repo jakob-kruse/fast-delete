@@ -1,4 +1,4 @@
-import { elementExists, urlMatch, waitUntil } from "../util";
+import { elementVisible, urlMatch, waitUntil } from "../util";
 
 const dialogQuerySelector = 'form[phx-submit="destroy-app"] > dialog[open]';
 
@@ -7,7 +7,7 @@ const buttonClass =
 
 export async function fly_io() {
   await waitUntil(() => {
-    return urlMatch("apps/.*/settings") && elementExists(dialogQuerySelector);
+    return urlMatch("apps/.*/settings") && elementVisible(dialogQuerySelector);
   });
 
   const dialog = document.querySelector(
