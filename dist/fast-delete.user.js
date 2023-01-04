@@ -2,8 +2,8 @@
 // @name         fast-delete
 // @namespace    fast-delete
 // @version      0.0.1
-// @description  fast-delete
-// @author       fast-delete
+// @description  Userscript to verify deletion on various providers, becuase I am sure, yes.
+// @author       Jakob Kruse <contact@jakob-kruse.de>
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
