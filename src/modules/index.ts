@@ -1,2 +1,2 @@
-export { fly_io } from "./fly_io";
-export { github_com } from "./github_com";
+export * as fly_io from "./fly_io";
+export * as github_com from "./github_com";

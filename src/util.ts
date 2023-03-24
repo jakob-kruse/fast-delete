@@ -1,11 +1,10 @@
-export function waitUntil(condition: () => boolean): Promise<void> {
+export async function waitUntil(condition: () => boolean): Promise<void> {
   return new Promise((resolve) => {
-    let interval = setInterval(() => {
-      let result = condition();
+    const interval = setInterval(() => {
+      const result = condition();
       if (result) {
         resolve();
         clearInterval(interval);
-        return;
       }
     }, 200);
   });
