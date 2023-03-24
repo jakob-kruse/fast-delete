@@ -1,7 +1,5 @@
 import * as modules from "./modules/index";
 
-console.log(modules);
-
 const host = window.location.host;
 const hostWithoutDots = host.replace(/\./g, "_");
 
